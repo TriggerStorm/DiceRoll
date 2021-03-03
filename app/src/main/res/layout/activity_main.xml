@@ -44,7 +44,7 @@
             android:maxWidth="100dp"
             android:scaleType="center"
             android:adjustViewBounds="true"
-            android:src="@drawable/dice1"
+            android:src="@drawable/dice0"
             />
 
         <ImageView
@@ -55,7 +55,8 @@
             android:maxWidth="100dp"
             android:scaleType="center"
             android:adjustViewBounds="true"
-            android:src="@drawable/dice2"
+            android:src="@drawable/dice0"
+
             />
 
     </LinearLayout>
