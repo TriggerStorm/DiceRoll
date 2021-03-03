@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
@@ -16,7 +17,6 @@
         android:textSize="34dp"
         android:textStyle="bold"
         />
-
     <Button
         android:id="@+id/bnHistory"
         android:layout_width="wrap_content"
@@ -30,10 +30,10 @@
         android:id="@+id/dicebord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="56dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tvHeader"
-        android:background="@color/dicebord">
+        android:background="@color/dicebord"
+        android:orientation="horizontal">
 
 
         <ImageView
@@ -41,52 +41,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:adjustViewBounds="true"
             android:maxWidth="100dp"
             android:scaleType="center"
-            android:adjustViewBounds="true"
-            android:src="@drawable/dice0"
-            />
+            android:src="@drawable/dice0" />
 
         <ImageView
             android:id="@+id/imgDice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:adjustViewBounds="true"
             android:maxWidth="100dp"
             android:scaleType="center"
-            android:adjustViewBounds="true"
             android:src="@drawable/dice0"
 
             />
 
     </LinearLayout>
 
+
+
     <Button
         android:id="@+id/btnRoll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Roll"
-        android:layout_below="@+id/dicebord"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="OnclickRoll"
         />
-    <TextView
-        android:id="@+id/tvHisory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnRoll"
-        android:layout_centerHorizontal="true"
-        android:text="test
-"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickClear"
-        />
+
+
 
 
 </RelativeLayout>

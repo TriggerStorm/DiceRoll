@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_history.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -14,7 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     val diceIds = arrayOf(R.drawable.dice1, R.drawable.dice2, R.drawable.dice3, R.drawable.dice4, R.drawable.dice5, R.drawable.dice6)
 
-    val mHistory = mutableListOf<Pair<Int, Int>>()
+    companion object{
+        val mHistory = mutableListOf<Pair<Int, Int>>()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +51,10 @@ class MainActivity : AppCompatActivity() {
         mHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
                             s += "$e1 - $e2\n"
         }
-        tvHisory.text = s
+        //val h = findViewById<TextView>(R.id.tvHisory);
+       // h.text = s
+        //tvHisory.text = s
+
     }
 
     fun onClickClear(view: View) {
