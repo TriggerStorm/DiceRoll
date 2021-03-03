@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object{
         val mHistory = mutableListOf<Pair<Int, Int>>()
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
