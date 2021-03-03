@@ -1,13 +1,17 @@
 package com.example.diceroll
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-// this a comment
+
+
+
     val mGenerator = Random()
 
     val diceIds = arrayOf(R.drawable.dice1, R.drawable.dice2, R.drawable.dice3, R.drawable.dice4, R.drawable.dice5, R.drawable.dice6)
@@ -17,6 +21,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val button = findViewById<Button>(R.id.bnHistory);
+        button.setOnClickListener{
+            val intent = Intent(this, History::class.java)
+            startActivity(intent)
+        }
     }
 
     fun OnclickRoll(view: View) {
@@ -47,4 +56,5 @@ class MainActivity : AppCompatActivity() {
         mHistory.clear()
         updateHistory()
     }
+
 }

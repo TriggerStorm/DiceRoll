@@ -13,8 +13,17 @@
         android:text="Dicecup v1"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:textSize="21dp"
+        android:textSize="34dp"
         android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/bnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="History"
         />
 
     <LinearLayout
@@ -35,7 +44,7 @@
             android:maxWidth="100dp"
             android:scaleType="center"
             android:adjustViewBounds="true"
-            android:src=""
+            android:src="@drawable/dice1"
             />
 
         <ImageView
@@ -46,7 +55,7 @@
             android:maxWidth="100dp"
             android:scaleType="center"
             android:adjustViewBounds="true"
-            android:src=""
+            android:src="@drawable/dice2"
             />
 
     </LinearLayout>
