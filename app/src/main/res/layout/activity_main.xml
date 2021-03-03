@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dicecup v1"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/dicebord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvHeader"
+        android:background="@color/dicebord">
+
+
+        <ImageView
+            android:id="@+id/imgDice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:maxWidth="100dp"
+            android:scaleType="center"
+            android:adjustViewBounds="true"
+            android:src=""
+            />
+
+        <ImageView
+            android:id="@+id/imgDice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:maxWidth="100dp"
+            android:scaleType="center"
+            android:adjustViewBounds="true"
+            android:src=""
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        android:layout_below="@+id/dicebord"
+        android:layout_centerHorizontal="true"
+        android:onClick="OnclickRoll"
+        />
+    <TextView
+        android:id="@+id/tvHisory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRoll"
+        android:layout_centerHorizontal="true"
+        android:text="test
+"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickClear"
+        />
+
+
+</RelativeLayout>
