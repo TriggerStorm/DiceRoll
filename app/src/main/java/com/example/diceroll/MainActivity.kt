@@ -8,6 +8,7 @@ import android.widget.GridLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.sql.Timestamp
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
        // val d2 = mGenerator.nextInt(6)
        // imgDice1.setImageResource(diceIds[d1])
       //  imgDice2.setImageResource(diceIds[d2])
-
+        var time = Timestamp(System.currentTimeMillis())
         val roll = arrayOfNulls<Int>(6)
         for (i in 0 until nrDice) {
             val d1 = mGenerator.nextInt(6)
@@ -63,21 +64,18 @@ class MainActivity : AppCompatActivity() {
             val v = grid.getChildAt(k) as ImageView
             v.setImageResource(diceIds[roll[k]!!])
         }
+        val r = Roll(time , roll)
 
        // rollHistory.add((d1+1 , d2+1))
-        //updateHistory(timestamp, roll)
+        updateHistory(r)
 
 
 
     }
 
-    private fun updateHistory() {
-        var s = ""
-       // rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
-         //                   s += "$e1 - $e2\n"
-        //}
+    private fun updateHistory(roll: Roll) {
 
-
+        rollHistory.add(roll)
     }
 
     fun onClickClear(view: View) {
