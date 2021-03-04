@@ -41,7 +41,7 @@ class History : AppCompatActivity() {
 // print out timestamp here
             for (j in 0 until currentRoll.noOfDice.size)
             {
-                s +=  "${currentRoll.noOfDice[j]+1} "
+                s +=  "${currentRoll.noOfDice[j]?.plus(1)} "
                 tvHisory.text = s
             }
             s += "\n"
