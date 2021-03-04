@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_history.*
 class History : AppCompatActivity() {
 
     //var mhistory = MainActivity.rollHistory
-    var rollHistory = MainActivity.rollHistory
+    var rHistory = MainActivity.rollHistory
 
     var diceRoll: Array<ImageView?> = arrayOfNulls<ImageView>(5)
 
@@ -33,13 +33,15 @@ class History : AppCompatActivity() {
             int res = getResources().getIdentifier("i"+i, "id", getPackageName());
             letters[i] = (ImageView) findViewById(res);*/
 
-        for (i in 0 until rollHistory.size) {
-            var currentRoll = rollHistory[i]
+        // grid.getChildAt(i).setImageResource(drawables.get(cards.get(i)))
+
+
+        for (i in 0 until rHistory.size) {
+            var currentRoll = rHistory[i]
 // print out timestamp here
             for (j in 0 until currentRoll.noOfDice.size)
             {
-                // grid.getChildAt(i).setImageResource(drawables.get(cards.get(i)))
-                s +=  "${currentRoll.noOfDice[j]} x"
+                s +=  "${currentRoll.noOfDice[j]+1} "
                 tvHisory.text = s
             }
             s += "\n"
@@ -50,7 +52,7 @@ class History : AppCompatActivity() {
     //val profileName=intent.getStringExtra("roll")
 
     fun onClickClear(view: View) {
-        rollHistory.clear()
+        rHistory.clear()
         updateHistory()
     }
     fun updateHistory(){
