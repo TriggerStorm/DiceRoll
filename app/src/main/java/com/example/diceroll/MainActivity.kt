@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
 
     companion object{
-        val mHistory = mutableListOf<Pair<Int, Int>>()
-        //val mHistory = mutableListOf<Roll>()
+        //val mHistory = mutableListOf<Pair<Int, Int>>()
+        val rollHistory = mutableListOf<Roll>()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,9 +45,8 @@ class MainActivity : AppCompatActivity() {
         imgDice1.setImageResource(diceIds[d1])
         imgDice2.setImageResource(diceIds[d2])
 
-        if(mHistory.size >=5)
-            mHistory.removeAt(0)
-            mHistory.add(Pair(d1+1 , d2+1))
+
+       // rollHistory.add((d1+1 , d2+1))
         updateHistory()
 
 
@@ -56,18 +55,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateHistory() {
         var s = ""
-        mHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
-                            s += "$e1 - $e2\n"
+       // rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
+         //                   s += "$e1 - $e2\n"
         }
-        //val h = findViewById<TextView>(R.id.tvHisory);
-       // h.text = s
-        //tvHisory.text = s
+
 
     }
 
     fun onClickClear(view: View) {
-        mHistory.clear()
-        updateHistory()
+        //rollHistory.clear()
+        //updateHistory()
     }
 
 }

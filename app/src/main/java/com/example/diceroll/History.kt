@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_history.*
 
 class History : AppCompatActivity() {
 
-    var mhistory = MainActivity.mHistory
+    var mhistory = MainActivity.rollHistory
 
     var diceRoll: Array<ImageView?> = arrayOfNulls<ImageView>(5)
 
@@ -22,8 +22,8 @@ class History : AppCompatActivity() {
         setContentView(R.layout.activity_history)
 
         var s = ""
-        mhistory.forEach{ p -> val e1 = p.first; val e2 = p.second
-            s += "$e1 - $e2\n"}
+       // rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
+         //   s += "$e1 - $e2\n"}
         tvHisory.text = s
 
         /*for (int i = 0; i < mhistory.size; i++) {
@@ -41,8 +41,8 @@ class History : AppCompatActivity() {
     }
     fun updateHistory(){
         var s = ""
-        mhistory.forEach{ p -> val e1 = p.first; val e2 = p.second
-            s += "$e1 - $e2\n"}
+        //rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
+        //    s += "$e1 - $e2\n"}
             tvHisory.text = s
     }
 }
