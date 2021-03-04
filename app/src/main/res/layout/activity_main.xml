@@ -54,9 +54,9 @@
         android:id="@+id/numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bnHistory"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="491dp" />
+        android:layout_alignParentBottom="true"
+         />
 
     <Button
         android:id="@+id/btnRoll"

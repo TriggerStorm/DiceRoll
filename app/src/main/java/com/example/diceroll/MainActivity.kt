@@ -50,9 +50,9 @@ class MainActivity : AppCompatActivity() {
     fun OnclickRoll(view: View) {
        // val d1 = mGenerator.nextInt(6)
        // val d2 = mGenerator.nextInt(6)
-
        // imgDice1.setImageResource(diceIds[d1])
       //  imgDice2.setImageResource(diceIds[d2])
+
         val roll = arrayOfNulls<Int>(6)
         for (i in 0 until nrDice) {
             val d1 = mGenerator.nextInt(6)
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         }
 
        // rollHistory.add((d1+1 , d2+1))
-        updateHistory()
+        //updateHistory(timestamp, roll)
 
 
 
