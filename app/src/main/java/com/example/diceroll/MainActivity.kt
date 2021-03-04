@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         var s = ""
        // rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
          //                   s += "$e1 - $e2\n"
-        }
+        //}
 
 
     }
