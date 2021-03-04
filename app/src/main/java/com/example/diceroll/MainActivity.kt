@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.NumberPicker
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_history.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,9 +17,11 @@ class MainActivity : AppCompatActivity() {
 
     val diceIds = arrayOf(R.drawable.dice1, R.drawable.dice2, R.drawable.dice3, R.drawable.dice4, R.drawable.dice5, R.drawable.dice6)
 
+
+
     companion object{
         val mHistory = mutableListOf<Pair<Int, Int>>()
-
+        //val mHistory = mutableListOf<Roll>()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +32,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, History::class.java)
             startActivity(intent)
         }
+        numberPicker.minValue = 0
+        numberPicker.maxValue = 6
+
+        numberPicker.wrapSelectorWheel = true
     }
 
     fun OnclickRoll(view: View) {
