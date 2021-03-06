@@ -23,8 +23,8 @@ class History : AppCompatActivity() {
         setContentView(R.layout.activity_history)
 
         var s = ""
-       // rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
-         //   s += "$e1 - $e2\n"}
+        // rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
+        //   s += "$e1 - $e2\n"}
         //tvHisory.text = s
 
         /*for (int i = 0; i < mhistory.size; i++) {
@@ -59,6 +59,6 @@ class History : AppCompatActivity() {
         var s = ""
         //rollHistory.forEach{ p -> val e1 = p.first; val e2 = p.second
         //    s += "$e1 - $e2\n"}
-            tvHisory.text = s
+        tvHisory.text = s
     }
 }
