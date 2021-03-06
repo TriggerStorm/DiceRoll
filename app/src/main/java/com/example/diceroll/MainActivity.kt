@@ -9,6 +9,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.sql.Timestamp
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
     companion object{
-        //val mHistory = mutableListOf<Pair<Int, Int>>()
+
         val rollHistory = mutableListOf<Roll>()
     }
 
@@ -49,11 +50,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun OnclickRoll(view: View) {
-       // val d1 = mGenerator.nextInt(6)
-       // val d2 = mGenerator.nextInt(6)
-       // imgDice1.setImageResource(diceIds[d1])
-      //  imgDice2.setImageResource(diceIds[d2])
+
+        val yourmilliseconds = System.currentTimeMillis()
+        val sdf = SimpleDateFormat("HH:mm:ss")
+        val resultdate = Date(yourmilliseconds)
+        val times =(sdf.format(resultdate))
+
         var time = Timestamp(System.currentTimeMillis())
+        //val sdf = SimpleDateFormat("HH:mm:ss")
+        //val dateString = sdf.format(new Date(Long.parseLong(time)));
+
         val roll = arrayOfNulls<Int>(6)
         for (i in 0 until nrDice) {
             val d1 = mGenerator.nextInt(6)
@@ -64,9 +70,9 @@ class MainActivity : AppCompatActivity() {
             val v = grid.getChildAt(k) as ImageView
             v.setImageResource(diceIds[roll[k]!!])
         }
-        val r = Roll(time , roll)
+        val r = Roll(times , roll)
 
-       // rollHistory.add((d1+1 , d2+1))
+
         updateHistory(r)
 
 
@@ -78,9 +84,6 @@ class MainActivity : AppCompatActivity() {
         rollHistory.add(roll)
     }
 
-    fun onClickClear(view: View) {
-        //rollHistory.clear()
-        //updateHistory()
-    }
+
 
 }
