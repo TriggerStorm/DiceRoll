@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     val mGenerator = Random()
 
-    val diceIds = arrayOf(R.drawable.dice1, R.drawable.dice2, R.drawable.dice3, R.drawable.dice4, R.drawable.dice5, R.drawable.dice6)
+    val diceIds = arrayOf(R.drawable.dice1, R.drawable.dice2, R.drawable.dice3, R.drawable.dice4, R.drawable.dice5, R.drawable.dice6, R.drawable.dice0)
 
     var nrDice = 1
 
@@ -50,6 +50,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun OnclickRoll(view: View) {
+//NEW
+        for (k in 1 until 6) {
+            val v = grid.getChildAt(k) as ImageView
+            v.setImageResource(diceIds[6])
+        }
+ //
 
         val yourmilliseconds = System.currentTimeMillis()
         val sdf = SimpleDateFormat("HH:mm:ss")
