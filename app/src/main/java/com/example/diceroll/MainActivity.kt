@@ -57,8 +57,7 @@ class MainActivity : AppCompatActivity() {
         val times =(sdf.format(resultdate))
 
         var time = Timestamp(System.currentTimeMillis())
-        //val sdf = SimpleDateFormat("HH:mm:ss")
-        //val dateString = sdf.format(new Date(Long.parseLong(time)));
+
 
         val roll = arrayOfNulls<Int>(6)
         for (i in 0 until nrDice) {
