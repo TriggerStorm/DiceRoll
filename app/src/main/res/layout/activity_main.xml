@@ -11,7 +11,7 @@
         android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dicecup v1"
+        android:text="Dicecup v2"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:textSize="34dp"
