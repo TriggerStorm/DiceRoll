@@ -8,15 +8,6 @@
 
 
             <ListView
-                android:id="@+id/tvTimeStamp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="time"
-                android:textSize="20dp"
-            />
-
-            <ListView
                 android:id="@+id/tvHisory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
