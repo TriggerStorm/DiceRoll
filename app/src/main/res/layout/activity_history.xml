@@ -6,19 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".History">
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/root_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
+            <ListView
                 android:id="@+id/tvTimeStamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -27,7 +16,7 @@
                 android:textSize="20dp"
             />
 
-            <TextView
+            <ListView
                 android:id="@+id/tvHisory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,8 +26,7 @@
                 android:textSize="20dp"
             />
 
-        </LinearLayout>
-    </ScrollView>
+
 
     <Button
         android:layout_width="wrap_content"
